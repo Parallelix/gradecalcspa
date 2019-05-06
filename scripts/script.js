@@ -42,11 +42,7 @@ let createSubject = function(myGroupId = groupId, nameOfSubject = "no Name passe
     }
 }
 
-const persons = [{ "name":"A", "salary":1200 }, { "name":"B", "salary": 1500 }];
-
-persons.forEach(item => item.salary += 1000);
-
-console.log(persons)
+// persons.forEach(item => item.salary += 1000);
 
 
 let addGroup = function(){
@@ -60,36 +56,73 @@ let addGroup = function(){
 // v = array[object, object, ...]
 let updateGrades = function(subjectName, grade) {
     for (let [key, value] of subjectGroups) {
-        console.log("Key: " + key);
+        //console.log("Key: " + key);
         // console.log("Value: " + value);
         for (let i = 0; i < value.length; i++) {
-            console.log("Value: " + value[i].nameOfSubject);
+            //console.log("Value: " + value[i].nameOfSubject);
 
             if (value[i].nameOfSubject === subjectName) {
-                console.log("Match: " + value[i].nameOfSubject);
+                //console.log("Match: " + value[i].nameOfSubject);
                 value[i].grade = grade;
             }
         }
     }
 }
 
+// take all known grades (!= -1), multiply them with their weight, sum, difference to desiredGrade, etc
 let calculateGrades = function(subjectGroupID, desiredGrade){
+    for (let [key, value] of subjectGroups) {
+        if(key === subjectGroupID){
+            let currentGrade = 0;
+            let gradesLeft = 0;
+            let weightLeft = 0;
+            for(let i = 0; i < value.length; i++){
+                if(value[i].grade != -1) {
+                    console.log("current Grade = " + currentGrade + ". now adding (" + value[i].grade + " * " + value[i].weight + ") " + (value[i].grade * value[i].weight));
+                    currentGrade += value[i].grade * value[i].weight;
+                }
+                else{
+                    gradesLeft++;
+                    weightLeft += value[i].weight;
+                    console.log("Grades Left: " + gradesLeft +", weight left: "+ weightLeft);
+                }
+            }
+            let gradeDifference = (desiredGrade - currentGrade) / weightLeft;
+            console.log("grades Difference: " + gradeDifference);
 
+            if (gradeDifference <= 6){
+                for(let i = 0; i < value.length; i++){
+                    if(value[i].grade === -1) {
+                        // store the result in array? print it?
+                        console.log("Subject: /" +value[i].nameOfSubject + ". Grade necessary: " + gradeDifference);
+                    }
+                }
+            }
+            else {
+                let bestPossibleGrade = ((gradesLeft * 6) * weightLeft )+ currentGrade;
+                console.log("Best possible grade: " + bestPossibleGrade)
+            }
+        }
+    }
 }
 
 // Test-data:
 addGroup()
-createSubject(0, s1, ws1, g1);
-createSubject(0, s2, ws2, g2);
-createSubject(0, s3, ws3, g3);
-addGroup();
-createSubject(1, s4, ws4, g4);
-createSubject(1, s5, ws5, g5);
-createSubject(1, s6, ws6, g6);
-createSubject(1, s7, ws7, g7);
+createSubject(0, s1, ws1, -1);
+createSubject(0, s2, ws2, -1);
+createSubject(0, s3, ws3, -1);
 
-updateGrades(s1, 6)
+addGroup();
+createSubject(1, s4, ws4, 2);
+createSubject(1, s5, ws5, 2);
+createSubject(1, s6, ws6, 2);
+createSubject(1, s7, ws7, -1);
+
+updateGrades(s1, 4)
+updateGrades(s3, 4)
 console.log(subjectGroups);
 
+calculateGrades(0, 5)
+calculateGrades(1, 4)
 
 

@@ -51,8 +51,6 @@ let addGroup = function(){
     groupId ++;
 }
 
-
-
 // v = array[object, object, ...]
 let updateGrades = function(subjectName, grade) {
     for (let [key, value] of subjectGroups) {
@@ -69,7 +67,6 @@ let updateGrades = function(subjectName, grade) {
     }
 }
 
-// take all known grades (!= -1), multiply them with their weight, sum, difference to desiredGrade, etc
 let calculateGrades = function(subjectGroupID, desiredGrade){
     for (let [key, value] of subjectGroups) {
         if(key === subjectGroupID){
@@ -106,23 +103,34 @@ let calculateGrades = function(subjectGroupID, desiredGrade){
     }
 }
 
-// Test-data:
-addGroup()
-createSubject(0, s1, ws1, -1);
-createSubject(0, s2, ws2, -1);
-createSubject(0, s3, ws3, -1);
+let test1 = function(){
+    addGroup()
+    createSubject(0, s1, ws1, -1);
+    createSubject(0, s2, ws2, -1);
+    createSubject(0, s3, ws3, -1);
 
-addGroup();
-createSubject(1, s4, ws4, 2);
-createSubject(1, s5, ws5, 2);
-createSubject(1, s6, ws6, 2);
-createSubject(1, s7, ws7, -1);
+    addGroup();
+    createSubject(1, s4, ws4, 2);
+    createSubject(1, s5, ws5, 2);
+    createSubject(1, s6, ws6, 2);
+    createSubject(1, s7, ws7, -1);
 
-updateGrades(s1, 4)
-updateGrades(s3, 4)
-console.log(subjectGroups);
+    updateGrades(s1, 4)
+    updateGrades(s3, 4)
+    console.log(subjectGroups);
 
-calculateGrades(0, 5)
-calculateGrades(1, 4)
+    calculateGrades(0, 5)
+    calculateGrades(1, 4)
 
+}
 
+//test1();
+
+let addHTMLElements = function(){
+    document.createTextNode('some text node');
+    const newEl = document.createElement('<div>');
+    //.id= 'createdButton';
+    //newEl.textContent = 'Newly created Button';
+    console.log("Button Created");
+}
+addHTMLElements();

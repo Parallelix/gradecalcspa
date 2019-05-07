@@ -15,6 +15,13 @@ html {
 
 }
 
+.buttonGroup{
+    background: lightblue;
+}
+#createdButton{
+    background: red;
+}
+
 body {
     width: 80vmin;
     height: auto;

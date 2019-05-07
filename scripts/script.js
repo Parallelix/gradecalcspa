@@ -121,7 +121,6 @@ let test1 = function(){
 
     calculateGrades(0, 5)
     calculateGrades(1, 4)
-
 }
 
 //test1();

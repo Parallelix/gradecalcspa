@@ -4,9 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/scripts/script.js" line="56" mnemonic="7" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2d4ee887-e68d-407e-aeb7-72a4a2a38a4a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/scripts/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/script.js" afterDir="false" />
-    </list>
+    <list default="true" id="2d4ee887-e68d-407e-aeb7-72a4a2a38a4a" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -30,8 +28,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scripts/script.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="331">
-              <caret line="122" column="25" selection-start-line="122" selection-start-column="25" selection-end-line="122" selection-end-column="25" />
+            <state relative-caret-position="535">
+              <caret line="134" selection-start-line="134" selection-end-line="134" />
               <folding>
                 <element signature="e#1017#1110#0" />
               </folding>
@@ -166,12 +164,12 @@
       <workItem from="1557136743340" duration="2664000" />
       <workItem from="1557150983002" duration="3074000" />
       <workItem from="1557205236261" duration="2635000" />
-      <workItem from="1557213420008" duration="1116000" />
+      <workItem from="1557213420008" duration="1720000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29876000" />
+    <option name="totallyTimeSpent" value="30480000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
@@ -231,8 +229,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/script.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="331">
-          <caret line="122" column="25" selection-start-line="122" selection-start-column="25" selection-end-line="122" selection-end-column="25" />
+        <state relative-caret-position="535">
+          <caret line="134" selection-start-line="134" selection-end-line="134" />
           <folding>
             <element signature="e#1017#1110#0" />
           </folding>

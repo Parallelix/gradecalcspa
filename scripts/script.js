@@ -132,4 +132,5 @@ let addHTMLElements = function(){
     //newEl.textContent = 'Newly created Button';
     console.log("Button Created");
 }
+
 addHTMLElements();

@@ -127,6 +127,7 @@ let test1 = function(){
     createSubject(0, s3, ws3, g3);
     createSubject(0, s4, ws4, g4);
 
+    
     addGroup();
     createSubject(1, s5, ws5, g5);
     createSubject(1, s6, ws6, g6);
